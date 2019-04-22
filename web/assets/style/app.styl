@@ -1,0 +1,23 @@
+// Import Vuetify styling
+@require '~vuetify/src/stylus/app.styl'
+
+// remove o background do autofill do chrome
+@-webkit-keyframes autofill
+  to
+    color #666
+    background transparent
+
+input:-webkit-autofill
+  -webkit-animation-name autofill
+  -webkit-animation-fill-mode both
+// remove o background do autofill do chrome
+
+// classe para desativar a selecao de texto
+.disable-select
+  user-select none
+  -webkit-user-select none
+  -khtml-user-select none
+  -moz-user-select none
+  -ms-user-select none
+// classe para desativar a selecao de texto
+
