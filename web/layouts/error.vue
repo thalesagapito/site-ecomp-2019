@@ -35,8 +35,8 @@ export default {
     btnProps() {
       return {
         'inner-color': '#191c28',
-        'gradient-colors': '#a6c0fe 0%, #f68084 100%',
-        'gradient-degrees': '120',
+        colors: '#a6c0fe 0%, #f68084 100%',
+        degrees: '120',
       };
     },
   },

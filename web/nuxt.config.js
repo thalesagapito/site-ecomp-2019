@@ -9,6 +9,9 @@ export default {
   */
   head: {
     title: pkg.name,
+    htmlAttrs: {
+      lang: 'pt',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -16,11 +19,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
-      },
     ],
   },
 
@@ -54,6 +52,8 @@ export default {
     '@nuxtjs/proxy',
     // modulo de auth do nuxt para interagir com o adonis no backend
     '@nuxtjs/auth',
+    // modulo para carregar fontes sem bloquear o carregamento da pagina
+    'nuxt-webfontloader',
   ],
   /*
   ** Axios module configuration
@@ -83,6 +83,14 @@ export default {
       },
     },
   },
+  /**
+  **Loader de fontes
+  */
+  webfontloader: {
+    google: {
+      families: ['Exo+2:400,700', 'Roboto:300,400,500,700|Material+Icons'],
+    },
+  },
   /*
   ** Build configuration
   */
@@ -105,9 +113,6 @@ export default {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/,
-          options: {
-            fix: true,
-          },
         });
       }
     },

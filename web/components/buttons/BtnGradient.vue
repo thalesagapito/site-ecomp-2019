@@ -7,12 +7,12 @@
 export default {
   name: 'BtnGradient',
   props: {
-    gradientColors: {
+    colors: {
       type: String,
       required: false,
       default: '#84fab0 0%, #8fd3f4 100%',
     },
-    gradientDegrees: {
+    degrees: {
       type: [String, Number],
       required: false,
       default: '0',
@@ -22,7 +22,7 @@ export default {
     gradientStyle() {
       return {
         padding: `${this.outlineWidth}px`,
-        'background-image': `linear-gradient(${this.gradientDegrees}deg, ${this.gradientColors})`,
+        'background-image': `linear-gradient(${this.degrees}deg, ${this.colors})`,
       };
     },
   },

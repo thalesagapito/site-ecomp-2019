@@ -43,8 +43,8 @@ export default {
         dark: true,
         block: true,
         'inner-color': '#fafafa',
-        'gradient-degrees': '45',
-        'gradient-colors': `${this.$vuetify.theme.primary} 0%, ${this.$vuetify.theme.info} 100%`,
+        degrees: '45',
+        colors: `${this.$vuetify.theme.primary} 0%, ${this.$vuetify.theme.info} 100%`,
       };
     },
   },

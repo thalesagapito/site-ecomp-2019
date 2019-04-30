@@ -9,12 +9,12 @@
 export default {
   name: 'BtnGradientOutline',
   props: {
-    gradientColors: {
+    colors: {
       type: String,
       required: false,
       default: '#84fab0 0%, #8fd3f4 100%',
     },
-    gradientDegrees: {
+    degrees: {
       type: [String, Number],
       required: false,
       default: '0',
@@ -34,7 +34,7 @@ export default {
     outStyle() {
       return {
         padding: `${this.outlineWidth}px`,
-        'background-image': `linear-gradient(${this.gradientDegrees}deg, ${this.gradientColors})`,
+        'background-image': `linear-gradient(${this.degrees}deg, ${this.colors})`,
       };
     },
     innerBtnStyle() {
@@ -44,7 +44,7 @@ export default {
     },
     innerTextStyle() {
       return {
-        'background-image': `-webkit-linear-gradient(${-1 * parseInt(this.gradientDegrees, 10) + 90}deg, ${this.gradientColors})`,
+        'background-image': `-webkit-linear-gradient(${-1 * parseInt(this.degrees, 10) + 90}deg, ${this.colors})`,
       };
     },
   },

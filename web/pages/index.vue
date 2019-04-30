@@ -1,34 +1,42 @@
 <template lang="pug">
-  v-container(fluid)
-    v-layout(column justify-center align-center fill-height)
-      v-flex(shrink)
-        .display-4.grey--text.text--darken-1 Home
-      v-flex(shrink pt-4)
-        v-layout(row justify-center align-center)
-          v-flex: nuxt-link(to="/login")
-            .px-5.title Login
-          v-flex: nuxt-link(to="/registro")
-            .px-5.title Registro
+  v-content.pt-0
+    home-hero
+    home-ecomp
+    home-depoimentos
+    home-features
+    home-tem-mais
+    home-venha-crescer
 </template>
 
 <script>
+import HomeHero from '../components/sections/home/HomeHero';
+import HomeEcomp from '../components/sections/home/HomeEcomp';
+import HomeDepoimentos from '../components/sections/home/HomeDepoimentos';
+import HomeFeatures from '../components/sections/home/HomeFeatures';
+import HomeTemMais from '../components/sections/home/HomeTemMais';
+import HomeVenhaCrescer from '../components/sections/home/HomeVenhaCrescer';
+
 export default {
+  components: {
+    HomeVenhaCrescer,
+    HomeTemMais,
+    HomeFeatures,
+    HomeDepoimentos,
+    HomeEcomp,
+    HomeHero,
+  },
   head() {
     return {
-      title: 'Meu projeto em Nuxt',
+      title: 'Ecomp',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Projeto em Nuxt, muito simples de usar',
+          content: 'Site da Ecomp',
         },
       ],
     };
   },
-  layout: 'visitantes',
+  layout: 'guests',
 };
 </script>
-
-<style lang="stylus" scoped>
-
-</style>
