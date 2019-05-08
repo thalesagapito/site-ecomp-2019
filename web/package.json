@@ -8,6 +8,7 @@
     "dev": "nuxt -s",
     "preview": "nuxt",
     "build": "nuxt build",
+    "c9": "nuxt -s --hostname '0.0.0.0'",
     "production": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
